@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUNG LAN - CART</title>
+
+    <link rel="stylesheet" href="../dist/mix/app.min.css">
+    <link rel="stylesheet" href="../dist/css/output.css">
+
+</head>
+
+<body class="text-sm text-[#333333] font-montserrat">
+    <header class="font-medium">
+        <div class="border-b border-solid border-gray-200">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="h-16 flex items-center lg:justify-between justify-center">
+                    <div class="items-center space-x-4 lg:flex hidden">
+                        <a href="tel:84969467477" class="flex items-center space-x-2">
+                            <img src="../dist/svg/Phone.svg" alt="phone svg">
+                            <div>+84 969 - 467 - 477</div>
+                        </a>
+                        <a href="mailto:support@hunglan.com" class="flex items-center space-x-2">
+                            <img src="../dist/svg/Email.svg" alt="phone svg">
+                            <div>support@hunglan.com</div>
+                        </a>
+                    </div>
+                    <div> Freeship đơn hàng từ 5.000.000 VNĐ </div>
+                    <div class="lg:block hidden">
+                        <nav class="flex items-center divide-x">
+                            <a href="" class="block pr-4">Đăng ký</a>
+                            <a href="" class="block pl-4">Đăng nhập</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 h-28 items-center justify-between lg:flex hidden">
+            <a href="">
+                <img class="w-36 object-cover" src="../dist/images/logo.png" alt="hung lan fruiniture">
+            </a>
+            <ul class="flex items-center">
+                <li>
+                    <a href="#" class="block px-4 py-2 uppercase hover:text-red-600">Trang chủ</a>
+                </li>
+                <li>
+                    <a href="#" class="block px-4 py-2 uppercase hover:text-red-600">Về chúng tôi</a>
+                </li>
+                <li>
+                    <a href="#" class="block px-4 py-2 uppercase hover:text-red-600">gạch ốp lát</a>
+                </li>
+                <li>
+                    <a href="#" class="block px-4 py-2 uppercase hover:text-red-600">thiết bị vệ sinh</a>
+                </li>
+                <li>
+                    <a href="#" class="block px-4 py-2 uppercase hover:text-red-600">combo</a>
+                </li>
+                <li>
+                    <a href="#" class="block px-4 py-2 uppercase hover:text-red-600">Tin tức</a>
+                </li>
+                <li>
+                    <a href="#" class="block px-4 py-2 uppercase hover:text-red-600">Khuyến mãi</a>
+                </li>
+                <li>
+                    <a href="#" class="block px-4 py-2 uppercase hover:text-red-600">Liên hệ</a>
+                </li>
+            </ul>
+
+            <div class="flex items-center space-x-4">
+                <a href="">
+                    <img class="" src="../dist/svg/Search.svg" alt="search">
+                </a>
+                <a href="">
+                    <img class="" src="../dist/svg/Cart.svg" alt="cart">
+                </a>
+            </div>
+        </div>
+
+        <div mobile
+            class="fixed z-50 top-0 left-0 lg:hidden bg-linear flex items-center justify-between w-full h-16 px-6 bg-white">
+            <button onclick="open_menu()" class="w-16">
+                <img class="w-6 h-6 object-cover" src="../dist/svg/Menu.svg" alt="Menu">
+            </button>
+            <a href="#" class="block h-full">
+                <img class="h-full py-1" alt="logo" src="../dist/images/logo.png">
+            </a>
+            <div class="flex items-center space-x-4">
+                <a href="" class="relative">
+                    <div
+                        class="absolute -top-2 -right-2 bg-[#B7202E] text-xs rounded-full text-white w-4 h-4 flex items-center justify-center">
+                        2</div>
+                    <img class="w-6 h-6 object-cover" src="../dist/svg/Cart.svg" alt="Cart">
+                </a>
+                <a href="">
+                    <img class="w-6 h-6 object-cover" src="../dist/svg/User.svg" alt="User">
+                </a>
+            </div>
+        </div>
+
+        <div class="fixed w-full z-50 top-0 right-full bg-linear transition h-full lg:hidden block bg-white"
+            id="container-mobile">
+            <div class="flex items-center justify-between h-16 px-6">
+                <a href="#" class="block h-full py-1">
+                    <img class="lazyload h-full" alt="logo" data-src="../dist/images/logo.png">
+                </a>
+                <button onclick="close_menu()">
+                    <svg class="stroke-current text-indigo-600" stroke="currentColor" fill="currentColor"
+                        stroke-width="0" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="none" d="M0 0h24v24H0V0z"></path>
+                        <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div class="px-4">
+                <ul>
+                    <li>
+                        <a href="#" class="py-2 block w-full">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="py-2 block w-full">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex h-16 w-full items-center max-w-7xl mx-auto my-10 space-x-3 px-4 bg-[#F5F6F9]">
+            <img class="w-6 h-6" src="../dist/svg/Home.svg" alt="">
+            <p class="font-semibold text-[#322F2E]">Trang chủ / </p>
+            <p class="font-semibold text-[#D12536]">Tin tức</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 lg:space-y-10 space-y-6">
+        <h3 class="text-center text-[#333333] text-2xl font-semibold">Tin tức</h3>
+        <div class="items-center grid grid-cols-12">
+            <div style="background-image: url(../dist/images/Rectangle\ 2096.png);"
+                class="col-span-12 relative lg:col-span-6 h-[428px] border border-solid rounded-md">
+                <div
+                    class="space-y-3 p-8 inset-x-0 rounded-md bottom-0 absolute bg-gradient-to-t from-[#B7202E] to-transparent opacity-80">
+                    <div
+                        class="bg-[#000000] font-semibold flex items-center justify-center opacity-70 rounded-md text-[#FFFFFF] w-28 h-8">
+                        Phong cách
+                    </div>
+                    <h3 class="text-[#FFFFFF] font-semibold text-3xl">Kiến trúc sư Tranh Phương chia sẻ về nội thất</h3>
+                    <div class="flex space-x-3 justify-between">
+                        <div class="flex space-x-2">
+                            <div class="flex space-x-2">
+                                <img class="w-4 h-4 " src="../dist/svg/Calendar.svg" alt="">
+                                <p class="text-[#FFFFFF]">18/06/2023</p>
+                            </div>
+                            <div class="flex space-x-2">
+                                <img class="w-4 h-4 " src="../dist/svg/Eye.svg" alt="">
+                                <p class="text-[#FFFFFF]">162 đã xem</p>
+                            </div>
+                        </div>
+
+                        <div class="flex space-x-3">
+                            <img src="../dist/svg/Ellipse 206.svg" alt="">
+                            <img src="../dist/svg/Ellipse 207.svg" alt="">
+                            <img src="../dist/svg/Ellipse 207.svg" alt="">
+                            <img src="../dist/svg/Ellipse 207.svg" alt="">
+                            <img src="../dist/svg/Ellipse 207.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-12 lg:col-span-6 h-[428px] mx-2">
+                <div class="w-full h-1/2 grid grid-cols-12">
+                    <div class="relative mx-2 h-full lg:col-span-6 col-span-12 border border-solid rounded-md"
+                        style="background-image: url(../dist/images/Rectangle-2098.png);">
+                        <div
+                            class="absolute bottom-0 p-2 inset-x-0 rounded-md bg-gradient-to-t from-[#B7202E] to-transparent opacity-80 ">
+                            <div
+                                class="bg-[#000000] flex justify-center opacity-70 items-center rounded-md text-[#FFFFFF] w-28 h-8">
+                                <p class="font-semibold text-white">Tin mới</p>
+                            </div>
+                            <h3 class="text-[#FFFFFF] font-semibold text-sm">Kiến trúc sư Tranh Phương chia sẻ về nội
+                                thất</h3>
+                        </div>
+                    </div>
+                    <div class="relative h-full lg:col-span-6 col-span-12 border border-solid rounded-md"
+                        style="background-image: url(../dist/images/Rectangle-2098.png);">
+                        <div
+                            class="absolute bottom-0 p-2 inset-x-0 rounded-md bg-gradient-to-t from-[#B7202E] to-transparent opacity-80 ">
+                            <div
+                                class="bg-[#000000] opacity-70 flex items-center justify-center rounded-md text-[#FFFFFF] w-28 h-8">
+                                <p class="font-semibold text-white">Phong thủy</p>
+                            </div>
+                            <h3 class="text-[#FFFFFF] font-semibold text-sm">Cách sắp xếp phòng ăn nhỏ để tối ưu hóa
+                                không gian sống</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-1/2 mt-2 grid grid-cols-12">
+                    <div class="relative mx-2 h-full lg:col-span-6 col-span-12 border border-solid rounded-md"
+                        style="background-image: url(../dist/images/Rectangle-2098.png);">
+                        <div
+                            class="absolute bottom-0 p-2 inset-x-0 rounded-md bg-gradient-to-t from-[#B7202E] to-transparent opacity-80 ">
+                            <div
+                                class="bg-[#000000] flex justify-center opacity-70 items-center rounded-md text-[#FFFFFF] w-28 h-8">
+                                <p class="font-semibold text-white">Nội thất</p>
+                            </div>
+                            <h3 class="text-[#FFFFFF] font-semibold text-sm">Tăng trải nghiệm thị giác cho căn nhà của
+                                bạn</h3>
+                        </div>
+                    </div>
+                    <div class="relative h-full lg:col-span-6 col-span-12 border border-solid rounded-md"
+                        style="background-image: url(../dist/images/Rectangle-2098.png);">
+                        <div
+                            class="absolute bottom-0 p-2 inset-x-0 rounded-md bg-gradient-to-t from-[#B7202E] to-transparent opacity-80 ">
+                            <div
+                                class="bg-[#000000] opacity-70 flex items-center justify-center rounded-md text-[#FFFFFF] w-28 h-8">
+                                <p class="font-semibold text-white">Phong thủy</p>
+                            </div>
+                            <h3 class="text-[#FFFFFF] font-semibold text-sm">Cách phối màu gạch ốp tường mặt tiền nhà
+                                cấp 4, biệt thự</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-12">
+            <div class="col-span-12 lg:col-span-9 mt-3">
+                <ul class="flex flex-row space-x-4 border-b border-[#EFEFEF] w-full h-9">
+                    <li class="font-semibold tetx-[#B7202E] border-b-2 border-[#B7202E]">Tin mới</li>
+                    <li class="font-semibold tetx-[#6C7B84]">Nội thất</li>
+                    <li class="font-semibold tetx-[#6C7B84]">Phong thủy</li>
+                    <li class="font-semibold tetx-[#6C7B84]">Phong cách</li>
+                </ul>
+                <div class="grid grid-cols-12 items-center my-6">
+                    <div class="col-span-12 w-full lg:col-span-4 lg:w-[278px] h-44 border border-solid rounded-md relative"
+                        style="background-image: url(../dist//images//Rectangle-2087.png);">
+                        <div
+                            class="bg-[#000000] opacity-70 absolute flex items-center bottom-2 right-2 justify-center rounded-md text-[#FFFFFF] w-28 h-8">
+                            <p class="font-semibold text-white">Bộ sư tập</p>
+                        </div>
+                    </div>
+                    <div class="col-span-12 space-y-4 ml-8 lg:col-span-8">
+                        <h3 class="font-semibold text-[#322F2E] text-xl">Tổng hợp các loại trần thạch cao đc yêu thích
+                            nhất hiện nay</h3>
+                        <p class="font-semibold text-[#6C7B84]">Cách phối màu gạch ốp tường mặt tiền nghịch tông rất phù
+                            hợp với gia đình thích sự nổi loạn,
+                            phá cách, tạo sự tương phản ấn tượng. Một số cặp phối màu là:trắng – đen, trắng – nâu, vàng
+                            – đen; màu trắng – đỏ, xanh lam – vàng. Bạn có thể phối màu như sau:</p>
+                        <div class="flex space-x-2">
+                            <div class="flex space-x-2">
+                                <img class="w-4 h-4 " src="../dist/svg/Calendar1.svg" alt="">
+                                <p class="text-[#6C7B84]">18/06/2023</p>
+                            </div>
+                            <div class="flex space-x-2">
+                                <img class="w-4 h-4 " src="../dist/svg/Eye1.svg" alt="">
+                                <p class="text-[#6C7B84]">162 đã xem</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-12 items-center my-6">
+                    <div class="col-span-12 w-full lg:col-span-4 lg:w-[278px] h-44 border border-solid rounded-md relative"
+                        style="background-image: url(../dist//images//Rectangle-2087.png);">
+                        <div
+                            class="bg-[#000000] opacity-70 absolute flex items-center bottom-2 right-2 justify-center rounded-md text-[#FFFFFF] w-28 h-8">
+                            <p class="font-semibold text-white">Báo chí</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 ml-8 col-span-12 lg:col-span-8">
+                        <h3 class="font-semibold text-[#322F2E] text-xl">Tổng hợp các loại trần thạch cao đc yêu thích
+                            nhất hiện nay</h3>
+                        <p class="font-semibold text-[#6C7B84]">Cách phối màu gạch ốp tường mặt tiền nghịch tông rất phù
+                            hợp với gia đình thích sự nổi loạn,
+                            phá cách, tạo sự tương phản ấn tượng. Một số cặp phối màu là:trắng – đen, trắng – nâu, vàng
+                            – đen; màu trắng – đỏ, xanh lam – vàng. Bạn có thể phối màu như sau:</p>
+                        <div class="flex space-x-2">
+                            <div class="flex space-x-2">
+                                <img class="w-4 h-4 " src="../dist/svg/Calendar1.svg" alt="">
+                                <p class="text-[#6C7B84]">18/06/2023</p>
+                            </div>
+                            <div class="flex space-x-2">
+                                <img class="w-4 h-4 " src="../dist/svg/Eye1.svg" alt="">
+                                <p class="text-[#6C7B84]">162 đã xem</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div class="flex  my-10 items-center relative">
+                        <div
+                            class="w-12 h-12 border border-solid mx-1 bg-[#B7202E] flex items-center justify-center font-semibold text-white rounded-md text-base">
+                            1</div>
+                        <div
+                            class="w-12 h-12 border border-solid mx-1 bg-white flex items-center justify-center font-semibold text-[#6C7B84] rounded-md text-base">
+                            2</div>
+                        <div
+                            class="w-12 h-12 border border-solid mx-1 bg-white flex items-center justify-center font-semibold text-[#6C7B84] rounded-md text-base">
+                            3</div>
+                        <div
+                            class="w-12 h-12 border border-solid mx-1 bg-white flex items-center justify-center font-semibold text-[#6C7B84] rounded-md text-base">
+                            4</div>
+                        <div
+                            class="w-12 h-12 border border-solid mx-1 bg-white flex items-center justify-center font-semibold text-[#6C7B84] rounded-md text-base">
+                            5</div>
+                        <div
+                            class="w-12 h-12 border border-solid mx-1 bg-white flex items-center justify-center font-semibold text-[#6C7B84] rounded-md text-base">
+                            6</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-12 lg:col-span-3">
+                <div
+                    class="border w-full h-12 p-3 flex items-center space-x-2 justify-between bg-[#B7202E] border-solid rounded-md">
+                    <h3 class="efont-semibold text-[#FFFFFF]"> Tin nổi bật</h3>
+                    <img class="w-5 h-5" src="../dist/svg/Union.svg" alt="">
+                </div>
+
+                <div class="lg:w-full my-6 grid grid-cols-12">
+                    <img class="lg:w-full lg:col-span-12 col-span-6 h-44 " src="../dist//images//Rectangle-2087.png" alt="">
+                    <div class="space-y-3 mx-3 lg:my-3 lg:col-span-12 col-span-6">
+                        <h3 class="font-semibold text-[#322F2E]">Tổng hợp các loại trần thạch cao được ưa chuộng nhất
+                            hiện nay</h3>
+                        <div class="flex space-x-2 text-[#747E97] items-center">
+                            <img class="w-4 h-4" src="../dist/svg/Calendar2.svg" alt="">
+                            <p>Thứ năm, 24/3/2022, 11:12 (GMT+7)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full my-6  grid grid-cols-12">
+                    <img class="lg:w-full h-44 lg:col-span-12 col-span-6" src="../dist//images//Rectangle-2087.png" alt="">
+                    <div class="space-y-3 mx-3 lg:my-3 lg:col-span-12 col-span-6">
+                        <h3 class="font-semibold text-[#322F2E]">Top 15 mẫu gạch lát hành lang đẹp bền thách thức mọi
+                            thời tiết</h3>
+                        <div class="flex space-x-2 text-[#747E97] items-center">
+                            <img class="w-4 h-4" src="../dist/svg/Calendar2.svg" alt="">
+                            <p>Thứ năm, 24/3/2022, 11:12 (GMT+7)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </main>
+
+    <footer class="bg-[#191919]">
+        <div class="max-w-7xl mx-auto px-4 lg:py-14 py-8">
+            <div class="lg:flex items-center lg:space-x-6 lg:space-y-0 space-y-4 mb-10">
+                <div class="w-full bg-[#303030] rounded-lg p-6">
+                    <div class="flex items-center justify-between mb-6 space-x-2">
+                        <div class="text-white text-base font-medium">Showroom Hùng Lan Cầu Giấy</div>
+                        <a href="#"
+                            class="flex items-center space-x-2 px-4 py-2 rounded-md bg-[#B7202E] text-white hover:shadow-md min-w-max">
+                            <div class="min-w-max">Chỉ đường</div>
+                            <img class="lazyload" data-src="../dist/svg/Arrow - Right - White.svg" alt="arrow right">
+                        </a>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-2">
+                            <div class="w-8 h-8 min-w-[6px] flex items-center justify-center rounded-md bg-[#6e6e6e]">
+                                <img class="lazyload" data-src="../dist/svg/Pin.svg" alt="phone">
+                            </div>
+                            <div class="text-[#FFEDED]">Số 532 Đường Láng, Q. Đống Đa, TP. Hà Nội</div>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <div class="w-8 h-8 min-w-[6px] flex items-center justify-center rounded-md bg-[#6e6e6e]">
+                                <img class="lazyload" data-src="../dist/svg/Phone - White.svg" alt="phone">
+                            </div>
+                            <div class="text-[#FFEDED]">1900 8282</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full bg-[#303030] rounded-lg p-6">
+                    <div class="flex items-center justify-between mb-6 space-x-2">
+                        <div class="text-white text-base font-medium">Showroom Hùng Lan Cầu Giấy</div>
+                        <a href="#"
+                            class="flex items-center space-x-2 px-4 py-2 rounded-md bg-[#B7202E] text-white hover:shadow-md min-w-max">
+                            <div class="min-w-max">Chỉ đường</div>
+                            <img class="lazyload" data-src="../dist/svg/Arrow - Right - White.svg" alt="arrow right">
+                        </a>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-2">
+                            <div class="w-8 h-8 min-w-[6px] flex items-center justify-center rounded-md bg-[#6e6e6e]">
+                                <img class="lazyload" data-src="../dist/svg/Pin.svg" alt="phone">
+                            </div>
+                            <div class="text-[#FFEDED]">Số 532 Đường Láng, Q. Đống Đa, TP. Hà Nội</div>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <div class="w-8 h-8 min-w-[6px] flex items-center justify-center rounded-md bg-[#6e6e6e]">
+                                <img class="lazyload" data-src="../dist/svg/Phone - White.svg" alt="phone">
+                            </div>
+                            <div class="text-[#FFEDED]">1900 8282</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 gap-6">
+                <div class="lg:col-span-3 col-span-6">
+                    <a href="#">
+                        <img class="lazyload" data-src="../dist/images/logo.png" alt="logo">
+                    </a>
+                    <div class="w-full flex items-center space-x-4 mt-6">
+                        <a href="#">
+                            <img class="w-8 h-8 lazyload" data-src="../dist/svg/Facebook.svg" alt="Facebook">
+                        </a>
+                        <a href="#">
+                            <img class="w-8 h-8 lazyload" data-src="../dist/svg/Messages.svg" alt="Messages">
+                        </a>
+                        <a href="#">
+                            <img class="w-8 h-8 lazyload" data-src="../dist/svg/Youtube.svg" alt="Youtube">
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-3 col-span-6 space-y-8">
+                    <div class="text-white border-l-4 border-solid border-[#D12536] pl-3 text-base font-semibold">Sản
+                        phẩm</div>
+                    <ul class="space-y-4">
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-3 col-span-6 space-y-8">
+                    <div class="text-white border-l-4 border-solid border-[#D12536] pl-3 text-base font-semibold">Về
+                        chúng tôi</div>
+                    <ul class="space-y-4">
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-3 col-span-6 space-y-8">
+                    <div class="text-white border-l-4 border-solid border-[#D12536] pl-3 text-base font-semibold">Chính
+                        sách & Điều khoản</div>
+                    <ul class="space-y-4">
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-8 border-t border-solid border-gray-400 text-white">
+            Copyright © Hùng Lan Interior & Bathroom 2023·All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="../dist/mix/app.min.js"></script>
+</body>
+
+</html>

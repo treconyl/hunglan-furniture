@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUNG LAN - CART</title>
+
+    <link rel="stylesheet" href="../dist/mix/app.min.css">
+    <link rel="stylesheet" href="../dist/css/output.css">
+
+</head>
+
+<body class="text-sm text-[#333333] font-montserrat">
+    <header class="font-medium">
+        <div class="border-b border-solid border-gray-200">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="h-16 flex items-center lg:justify-between justify-center">
+                    <div class="items-center space-x-4 lg:flex hidden">
+                        <a href="tel:84969467477" class="flex items-center space-x-2">
+                            <img src="../dist/svg/Phone.svg" alt="phone svg">
+                            <div>+84 969 - 467 - 477</div>
+                        </a>
+                        <a href="mailto:support@hunglan.com" class="flex items-center space-x-2">
+                            <img src="../dist/svg/Email.svg" alt="phone svg">
+                            <div>support@hunglan.com</div>
+                        </a>
+                    </div>
+                    <div> Freeship đơn hàng từ 5.000.000 VNĐ </div>
+                    <div class="lg:block hidden">
+                        <nav class="flex items-center divide-x">
+                            <a href="" class="block pr-4">Đăng ký</a>
+                            <a href="" class="block pl-4">Đăng nhập</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 h-28 items-center justify-between lg:flex hidden">
+            <a href="">
+                <img class="w-36 object-cover" src="../dist/images/logo.png" alt="hung lan fruiniture">
+            </a>
+            <ul class="flex items-center">
+                <li>
+                    <a href="#" class="block px-4 py-2 uppercase hover:text-red-600">Trang chủ</a>
+                </li>
+                <li>
+                    <a href="#" class="block px-4 py-2 uppercase hover:text-red-600">Về chúng tôi</a>
+                </li>
+                <li>
+                    <a href="#" class="block px-4 py-2 uppercase hover:text-red-600">gạch ốp lát</a>
+                </li>
+                <li>
+                    <a href="#" class="block px-4 py-2 uppercase hover:text-red-600">thiết bị vệ sinh</a>
+                </li>
+                <li>
+                    <a href="#" class="block px-4 py-2 uppercase hover:text-red-600">combo</a>
+                </li>
+                <li>
+                    <a href="#" class="block px-4 py-2 uppercase hover:text-red-600">Tin tức</a>
+                </li>
+                <li>
+                    <a href="#" class="block px-4 py-2 uppercase hover:text-red-600">Khuyến mãi</a>
+                </li>
+                <li>
+                    <a href="#" class="block px-4 py-2 uppercase hover:text-red-600">Liên hệ</a>
+                </li>
+            </ul>
+
+            <div class="flex items-center space-x-4">
+                <a href="">
+                    <img class="" src="../dist/svg/Search.svg" alt="search">
+                </a>
+                <a href="">
+                    <img class="" src="../dist/svg/Cart.svg" alt="cart">
+                </a>
+            </div>
+        </div>
+
+        <div mobile
+            class="fixed z-50 top-0 left-0 lg:hidden bg-linear flex items-center justify-between w-full h-16 px-6 bg-white">
+            <button onclick="open_menu()" class="w-16">
+                <img class="w-6 h-6 object-cover" src="../dist/svg/Menu.svg" alt="Menu">
+            </button>
+            <a href="#" class="block h-full">
+                <img class="h-full py-1" alt="logo" src="../dist/images/logo.png">
+            </a>
+            <div class="flex items-center space-x-4">
+                <a href="" class="relative">
+                    <div
+                        class="absolute -top-2 -right-2 bg-[#B7202E] text-xs rounded-full text-white w-4 h-4 flex items-center justify-center">
+                        2</div>
+                    <img class="w-6 h-6 object-cover" src="../dist/svg/Cart.svg" alt="Cart">
+                </a>
+                <a href="">
+                    <img class="w-6 h-6 object-cover" src="../dist/svg/User.svg" alt="User">
+                </a>
+            </div>
+        </div>
+
+        <div class="fixed w-full z-50 top-0 right-full bg-linear transition h-full lg:hidden block bg-white"
+            id="container-mobile">
+            <div class="flex items-center justify-between h-16 px-6">
+                <a href="#" class="block h-full py-1">
+                    <img class="lazyload h-full" alt="logo" data-src="../dist/images/logo.png">
+                </a>
+                <button onclick="close_menu()">
+                    <svg class="stroke-current text-indigo-600" stroke="currentColor" fill="currentColor"
+                        stroke-width="0" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="none" d="M0 0h24v24H0V0z"></path>
+                        <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div class="px-4">
+                <ul>
+                    <li>
+                        <a href="#" class="py-2 block w-full">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="py-2 block w-full">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex h-16 w-full items-center max-w-7xl mx-auto my-10 space-x-3 px-4 bg-[#F5F6F9]">
+                <img class="w-6 h-6" src="../dist/svg/Home.svg" alt="">
+                <p class="font-semibold text-[#322F2E]">Trang chủ / </p>
+                <p class="font-semibold text-[#D12536]">Giỏ hàng</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 lg:space-y-10 space-y-6">
+        <div class="flex items-center justify-between relative">
+            <div class="w-full h-px bg-[#eaeaea] absolute top-1/2 left-0"></div>
+            <div class="flex lg:flex-row flex-col items-center lg:space-x-4 relative z-10 bg-white lg:pr-10 pr-4">
+                <div class="w-12 h-12 bg-[#B7202E] flex items-center justify-center font-semibold text-white rounded-md text-base">1</div>
+                <div>
+                    <h5 class="font-semibold text-[#333333] lg:mt-0 mt-2">Giỏ hàng</h5>
+                    <p class="text-[#808A96] text-xs lg:block hidden">Kiểm tra thông tin giỏ hàng của bạn</p>
+                </div>
+            </div>
+            <div class="flex lg:flex-row flex-col items-center lg:space-x-4 relative z-10 bg-white lg:px-10 px-4">
+                <div class="w-12 h-12 bg-white flex items-center justify-center font-semibold text-[#808A96] rounded-md text-base border border-solid border-[#EBEAF0]">2</div>
+                <div>
+                    <h5 class="font-semibold text-[#333333] lg:mt-0 mt-2">Thông tin đặt hàng</h5>
+                    <p class="text-[#808A96] text-xs lg:block hidden">Kiểm tra thông tin đặt hàng</p>
+                </div>
+            </div>
+            <div class="flex lg:flex-row flex-col items-center lg:space-x-4 relative z-10 bg-white lg:pl-10 pl-4">
+                <div class="w-12 h-12 bg-white flex items-center justify-center font-semibold text-[#808A96] rounded-md text-base border border-solid border-[#EBEAF0]">3</div>
+                <div>
+                    <h5 class="font-semibold text-[#333333] lg:mt-0 mt-2">Đặt hàng</h5>
+                    <p class="text-[#808A96] text-xs lg:block hidden">Tiến hành gửi yêu cầu đặt hàng</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2 class="font-medium text-lg lg:mb-6 mb-2">Giỏ hàng</h2>
+            <div class="grid grid-cols-12 gap-6">
+                <div class="lg:col-span-9 col-span-12">
+                    <table class="w-full">
+                        <thead>
+                            <tr>
+                                <th class="py-6">
+                                    <div>
+                                        <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 mt-1 outline-none text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 cursor-pointer dark:bg-gray-700 dark:border-gray-600">
+                                    </div>
+                                </th>
+                                <th class="text-left font-medium text-[#322F2E] px-2">Chọn tất cả sản phẩm</th>
+                                <th class="text-center font-medium text-[#322F2E] px-2 lg:block hidden">Số lượng</th>
+                                <th class="text-center font-medium text-[#322F2E] px-2 lg:block hidden">Thành tiền</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 mt-1 outline-none text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 cursor-pointer dark:bg-gray-700 dark:border-gray-600">
+                                </td>
+                                <td class="px-2">
+                                    <div class="flex items-center space-x-4">
+                                        <img class="object-cover w-16 h-16 rounded-lg border border-solid border-gray-200" src="../dist/images/1.png" alt="">
+                                        <div>
+                                            <p class="font-semibold">Bồn cầu thông minh</p>
+                                            <p class="text-[#B7202E]">716.000đ</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="w-36 h-10 max-w-max mx-auto rounded-md border-2 border-solid border-[#EFEFEF] text-[#6C7B84] flex items-center justify-between">
+                                        <button data-action="decrement" class=" text-gray-600 w-full h-10">
+                                            −
+                                        </button>
+                                        <input type="text" class="outline-none focus:outline-none text-center w-full font-semibold text-md" name="custom-input-number" value="0"></input>
+                                        <button data-action="increment" class=" text-gray-600 w-full h-10">
+                                            +
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="font-semibold text-center">1.423.000đ</td>
+                                <td>
+                                    <a href="">
+                                        <img src="../dist/svg/Trash - 2.svg" alt="">
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3 class="font-semibold my-4">Quà tặng</h3>
+                    <div class="flex bg-slate-300 rounded-md h-14 items-center px-1 space-x-1">
+                        <img class="w-6 h-6" src="../dist/svg/mingcute_gift-fill.svg" alt="">
+                        <p>Tặng kèm bộ sản phảm vệ sinh</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-3 col-span-12">
+                    <div class="border border-[#EBEAF0] rounded-md p-3 my-3 mx-3">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-semibold">Voucher khuyến mãi</h3>
+                            <button class="text-[#B7202E] text-xs font-medium">Thay đổi</button>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img class="w-8 h-8 min-w-[32px]" src="../dist//images/Rectangle 2032.png" alt="">
+                            <div>
+                                <p class="text-xs">Giảm 50% cho đơn hàng từ 499K</p>
+                                <p class="font-semibold">-35.000đ</p>
+                            </div>
+                            <div>
+                                <img src="../dist/svg/Chevron - Right.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border border-[#EBEAF0] rounded-md p-3 mx-3 my-3 space-y-4">
+                        <div class="flex justify-between">
+                            <div class="font-semibold text-cs text-[#6C7B84]">Tạm tính</div>
+                            <div class="font-semibold text-[#322F2E]">1.292.000đ</div>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="font-semibold text-cs text-[#6C7B84]">Giảm giá</div>
+                            <div class="font-semibold text-[#322F2E]">-78.000đ</div>
+                        </div>
+                        <div class="flex justify-between text-lg border-t">
+                            <div class="font-semibold text-[#1D2642]">Tổng tiền</div>
+                            <div class="font-semibold text-[#B7202E]">3.921.000đ</div>
+                        </div>
+                    </div>
+                    <div class="bg-[#B7202E] border rounded-md p-3 mx-3 my-3 text-center bg">
+                        <button class="text-[#FFFFFF]">Đặt hàng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[#191919]">
+        <div class="max-w-7xl mx-auto px-4 lg:py-14 py-8">
+            <div class="lg:flex items-center lg:space-x-6 lg:space-y-0 space-y-4 mb-10">
+                <div class="w-full bg-[#303030] rounded-lg p-6">
+                    <div class="flex items-center justify-between mb-6 space-x-2">
+                        <div class="text-white text-base font-medium">Showroom Hùng Lan Cầu Giấy</div>
+                        <a href="#"
+                            class="flex items-center space-x-2 px-4 py-2 rounded-md bg-[#B7202E] text-white hover:shadow-md min-w-max">
+                            <div class="min-w-max">Chỉ đường</div>
+                            <img class="lazyload" data-src="../dist/svg/Arrow - Right - White.svg" alt="arrow right">
+                        </a>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-2">
+                            <div class="w-8 h-8 min-w-[6px] flex items-center justify-center rounded-md bg-[#6e6e6e]">
+                                <img class="lazyload" data-src="../dist/svg/Pin.svg" alt="phone">
+                            </div>
+                            <div class="text-[#FFEDED]">Số 532 Đường Láng, Q. Đống Đa, TP. Hà Nội</div>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <div class="w-8 h-8 min-w-[6px] flex items-center justify-center rounded-md bg-[#6e6e6e]">
+                                <img class="lazyload" data-src="../dist/svg/Phone - White.svg" alt="phone">
+                            </div>
+                            <div class="text-[#FFEDED]">1900 8282</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full bg-[#303030] rounded-lg p-6">
+                    <div class="flex items-center justify-between mb-6 space-x-2">
+                        <div class="text-white text-base font-medium">Showroom Hùng Lan Cầu Giấy</div>
+                        <a href="#"
+                            class="flex items-center space-x-2 px-4 py-2 rounded-md bg-[#B7202E] text-white hover:shadow-md min-w-max">
+                            <div class="min-w-max">Chỉ đường</div>
+                            <img class="lazyload" data-src="../dist/svg/Arrow - Right - White.svg" alt="arrow right">
+                        </a>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-2">
+                            <div class="w-8 h-8 min-w-[6px] flex items-center justify-center rounded-md bg-[#6e6e6e]">
+                                <img class="lazyload" data-src="../dist/svg/Pin.svg" alt="phone">
+                            </div>
+                            <div class="text-[#FFEDED]">Số 532 Đường Láng, Q. Đống Đa, TP. Hà Nội</div>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <div class="w-8 h-8 min-w-[6px] flex items-center justify-center rounded-md bg-[#6e6e6e]">
+                                <img class="lazyload" data-src="../dist/svg/Phone - White.svg" alt="phone">
+                            </div>
+                            <div class="text-[#FFEDED]">1900 8282</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 gap-6">
+                <div class="lg:col-span-3 col-span-6">
+                    <a href="#">
+                        <img class="lazyload" data-src="../dist/images/logo.png" alt="logo">
+                    </a>
+                    <div class="w-full flex items-center space-x-4 mt-6">
+                        <a href="#">
+                            <img class="w-8 h-8 lazyload" data-src="../dist/svg/Facebook.svg" alt="Facebook">
+                        </a>
+                        <a href="#">
+                            <img class="w-8 h-8 lazyload" data-src="../dist/svg/Messages.svg" alt="Messages">
+                        </a>
+                        <a href="#">
+                            <img class="w-8 h-8 lazyload" data-src="../dist/svg/Youtube.svg" alt="Youtube">
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-3 col-span-6 space-y-8">
+                    <div class="text-white border-l-4 border-solid border-[#D12536] pl-3 text-base font-semibold">Sản
+                        phẩm</div>
+                    <ul class="space-y-4">
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-3 col-span-6 space-y-8">
+                    <div class="text-white border-l-4 border-solid border-[#D12536] pl-3 text-base font-semibold">Về
+                        chúng tôi</div>
+                    <ul class="space-y-4">
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-3 col-span-6 space-y-8">
+                    <div class="text-white border-l-4 border-solid border-[#D12536] pl-3 text-base font-semibold">Chính
+                        sách & Điều khoản</div>
+                    <ul class="space-y-4">
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                        <li class="list-disc list-inside text-white">
+                            <a href="#" class="">Gạch ốp lát</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-8 border-t border-solid border-gray-400 text-white">
+            Copyright © Hùng Lan Interior & Bathroom 2023·All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="../dist/mix/app.min.js"></script>
+</body>
+
+</html>
