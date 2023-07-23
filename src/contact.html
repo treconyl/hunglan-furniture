@@ -127,71 +127,74 @@
                 </ul>
             </div>
         </div>
-        <div class="flex h-16 w-full items-center max-w-7xl mx-auto my-10 space-x-3 px-4 bg-[#F5F6F9]">
-            <img class="w-6 h-6" src="../dist/svg/Home.svg" alt="">
-            <p class="font-semibold text-[#322F2E]">Trang chủ / </p>
-            <p class="font-semibold text-[#D12536]">Liên hệ</p>
-        </div>
     </header>
 
-    <main class="max-w-7xl lg:mx-auto lg:space-y-10">
-        <div class="bg-[#2E2E32] p-4 grid grid-cols-12">
-            <div class="lg:col-span-6 col-span-12 grid grid-cols-12">
-                <div class="lg:col-span-4"></div>
-                <div class="lg:col-span-8 col-span-12 my-10">
+    <main>
+        <!--breadcrumb-->
+        <section class="bg-[#F5F6F9]">
+            <div class="max-w-7xl mx-auto px-4">
+                <ul class="flex items-center py-4 space-x-3">
+                    <li>
+                        <a href="#" class="flex items-center space-x-2">
+                            <img src="../dist/svg/Home.svg" alt="home">
+                            <div>Trang chủ</div>
+                        </a>
+                    </li>
+                    <li>/</li>
+                    <li>
+                        <a href="#" class="block text-[#D12536]">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="bg-[#2E2E32] p-4 ">
+            <div class="max-w-7xl mx-auto px-4 grid grid-cols-12">
+                <div class="lg:col-span-6 col-span-12">
                     <div>
                         <h3 class="text-white font-semibold text-xl">
                             <strong class="text-[#B7202E]">Hùng Lan</strong> Interior & Bathroom <br>
                             Kiến tạo không gian sống!
                         </h3>
                         <div class="my-4">
-                            <p class="text-[#6C7B84]">Nếu có bất kỳ góp ý, thắc mắc, quý khách hàng vui lòng điền đầy đủ
-                                thông
-                                tin vào form liên hệ dưới đây; gọi trực tiếp vào số hotline
-                                <em class="text-white">1900 8282</em>
-                                hoặc tới trực tiếp showroom của chúng tôi để
-                                được giải đáp. Hùng Lan Interior & Bathroom rất hân hạnh đón tiếp.
+                            <p class="text-[#6C7B84]">Nếu có bất kỳ góp ý, thắc mắc, quý khách hàng vui lòng điền đầy đủ thông tin vào form liên hệ dưới đây; gọi trực tiếp vào số hotline 1900 8282 hoặc tới trực tiếp showroom của chúng tôi để được giải đáp. Hùng Lan Interior & Bathroom rất hân hạnh đón tiếp.
                             </p>
                         </div>
                     </div>
                     <form action="">
                         <div>
-                            <input type="text" placeholder="Họ và tên *"
-                                class="border  border-[#6C7B84] p-2 my-2 rounded-md w-full opacity-10 bg-white">
+                            <input type="text" placeholder="Họ và tên *" class="outline-none px-6 py-3 my-2 rounded-md w-full bg-[#424246] text-white">
                         </div>
                         <div>
-                            <input type="text" placeholder="Số điện thoại *"
-                                class="border  border-[#6C7B84] p-2 my-2 rounded-md w-full opacity-10 bg-white">
+                            <input type="text" placeholder="Số điện thoại *" class="outline-none px-6 py-3 my-2 rounded-md w-full bg-[#424246] text-white">
                         </div>
                         <div>
-                            <input type="text" placeholder="Email"
-                                class="border  border-[#6C7B84] p-2 my-2 rounded-md w-full opacity-10 bg-white">
+                            <input type="text" placeholder="Email" class="outline-none px-6 py-3 my-2 rounded-md w-full bg-[#424246] text-white">
                         </div>
                         <div>
-                            <input type="text" placeholder="Tiêu đề"
-                                class="border  border-[#6C7B84] p-2 my-2 rounded-md w-full opacity-10 bg-white">
+                            <input type="text" placeholder="Tiêu đề *" class="outline-none px-6 py-3 my-2 rounded-md w-full bg-[#424246] text-white">
                         </div>
                         <div>
-                            <textarea type="text" placeholder="Nội dung chi tiết *"
-                                class="border  border-[#6C7B84] p-2 my-2 rounded-md w-full opacity-10 bg-white">
-                        </textarea>
+                            <textarea placeholder="Nội dung chi tiết *" class="outline-none h-24 px-6 py-3 my-2 rounded-md w-full bg-[#424246] text-white"></textarea>
                         </div>
                         <button
                             class="lg:w-[150px] w-full h-14 bg-[#B7202E] rounded-md flex items-center justify-center text-white">Gửi
                             liên hệ <img class="w-5 h-5 ml-3" src="../dist/svg/Send - 2.svg" alt=""></button>
                     </form>
                 </div>
+                <div class="lg:col-span-6 lg:block hidden">
+                    <img class="w-full object-cover" src="../dist/images/Group.png" alt="Group">
+                </div>
             </div>
-            <div class="lg:col-span-6 lg:block hidden">
-                <img class="w-[937px]" src="../dist/images/Group.png" alt="">
-            </div>
+            
         </div>
-        <div class="bg-white my-10">
-            <div>
-                <img class="w-[1200px] h-[502px]" src="../dist/images/Rectangle 2094.png" alt="">
+        
+        <div class="max-w-7xl mx-auto px-4 bg-white my-10 space-y-6">
+            <div class="rounded-xl overflow-hidden">
+                <img class="w-full h-full" src="../dist/images/google-maps.png" alt="google-maps">
             </div>
-            <div class="grid grid-cols-12 lg:space-x-3 p-4 space-y-3 my-5">
-                <div class="lg:col-span-6 col-span-12 bg-[#D2D2D2] rounded-md py-4 px-5 space-y-4">
+            <div class="grid grid-cols-2 lg:space-x-6 space-x-0 lg:space-y-0 space-y-6">
+                <div class="lg:col-span-1 col-span-2 bg-[#f6f6f6] rounded-md py-4 px-5 space-y-4">
                     <h3 class="font-semibold text-[#B7202E] text-base">Showroom Hùng Lan Đống Đa</h3>
                     <div class="flex space-x-3">
                         <img class="w-6 h-6" src="../dist/svg/Pin.svg" alt="">
@@ -203,7 +206,7 @@
                     </div>
                 </div>
 
-                <div class="lg:col-span-6 col-span-12 bg-[#D2D2D2] rounded-md py-4 px-5 space-y-4">
+                <div class="lg:col-span-1 col-span-2 bg-[#f6f6f6] rounded-md py-4 px-5 space-y-4">
                     <h3 class="font-semibold text-[#B7202E] text-base">Showroom Hùng Lan Cầu Giấy</h3>
                     <div class="flex space-x-3">
                         <img class="w-6 h-6" src="../dist/svg/Pin.svg" alt="">

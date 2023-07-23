@@ -12,38 +12,68 @@
 </head>
 <body class="text-sm text-[#333333] font-montserrat">
     <header class="font-medium">
+        <div mobile class="fixed z-50 top-0 left-0 lg:hidden bg-linear flex items-center justify-between w-full h-16 px-6 bg-white">
+            <button onclick="open_menu()" class="w-16">
+                <img class="w-6 h-6 object-cover" src="../dist/svg/Menu.svg" alt="Menu">
+            </button>
+            <a href="#" class="block h-full">
+                <img class="h-full py-1" alt="logo" src="../dist/images/logo.png">
+            </a>
+            <div class="flex items-center space-x-4">
+                <a href="" class="relative">
+                    <div class="absolute -top-2 -right-2 bg-[#B7202E] text-xs rounded-full text-white w-4 h-4 flex items-center justify-center">2</div>
+                    <img class="w-6 h-6 object-cover" src="../dist/svg/Cart.svg" alt="Cart">
+                </a>
+                <a href="">
+                    <img class="w-6 h-6 object-cover" src="../dist/svg/User.svg" alt="User">
+                </a>
+            </div>
+        </div>
+        <div class="fixed w-full z-50 top-0 right-full bg-linear transition h-full lg:hidden block bg-white" id="container-mobile">
+            <div class="flex items-center justify-between h-16 px-6">
+                <a href="#" class="block h-full py-1">
+                    <img class="lazyload h-full" alt="logo" data-src="../dist/images/logo.png">
+                </a>
+                <button onclick="close_menu()">
+                    <svg class="stroke-current text-indigo-600" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+                </button>
+            </div>
+            <div class="px-4">
+                <ul>
+                    <li>
+                        <a href="#" class="py-2 block w-full">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="py-2 block w-full">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
         <div class="border-b border-solid border-gray-200">
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="h-16 flex items-center lg:justify-between justify-center">
-                    <div class="items-center space-x-4 lg:flex hidden">
-                        <a href="tel:84969467477" class="flex items-center space-x-2">
-                            <img src="../dist/svg/Phone.svg" alt="phone svg">
-                            <div>+84 969 - 467 - 477</div>
-                        </a>
-                        <a href="mailto:support@hunglan.com" class="flex items-center space-x-2">
-                            <img src="../dist/svg/Email.svg" alt="phone svg">
-                            <div>support@hunglan.com</div>
-                        </a>
-                    </div>
-                    <div> Freeship đơn hàng từ 5.000.000 VNĐ </div>
-                    <div class="lg:block hidden">
-                        <nav class="flex items-center divide-x">
-                            <a href="" class="block pr-4">Đăng ký</a>
-                            <a href="" class="block pl-4">Đăng nhập</a>
-                        </nav>
-                    </div>
+            <div class="max-w-8xl mx-auto px-8 h-28 items-center justify-between lg:flex hidden space-x-32">
+                <a href="" class="block">
+                    <img class="w-36 object-cover" src="../dist/images/logo.png" alt="hung lan fruiniture">
+                </a>
+
+                <form action="" method="GET" class="w-full relative">
+                    <input type="text" name="keywords" placeholder="Tìm kiếm" class="w-full text-gray-700 bg-[#ebebeb] rounded-lg px-6 py-3 outline-none">
+                    <img class="w-6 h-6 absolute top-1/2 transform -translate-y-1/2 z-10 right-4" src="../dist/svg/Search.svg" alt="Search">
+                </form>
+
+                <div class="flex items-center space-x-4 divide-x-2 divide-gray-200">
+                    <a href="" class="block min-w-max">
+                        <img class="" src="../dist/svg/Cart.svg" alt="cart">
+                    </a>
+                    <a href="" class="block min-w-max pl-4">
+                        Đăng nhập
+                    </a>
                 </div>
             </div>
         </div>
-        
-        <div class="max-w-7xl mx-auto px-4 h-28 items-center justify-between lg:flex hidden">
-            <a href="">
-                <img class="w-36 object-cover" src="../dist/images/logo.png" alt="hung lan fruiniture">
-            </a>
+
+        <div class="max-w-8xl mx-auto px-4 flex items-center justify-between py-2">
             <ul class="flex items-center">
-                <li>
-                    <a href="#" class="block px-4 py-2 uppercase hover:text-red-600">Trang chủ</a>
-                </li>
                 <li>
                     <a href="#" class="block px-4 py-2 uppercase hover:text-red-600">Về chúng tôi</a>
                 </li>
@@ -67,52 +97,15 @@
                 </li>
             </ul>
 
-            <div class="flex items-center space-x-4">
-                <a href="">
-                    <img class="" src="../dist/svg/Search.svg" alt="search">
+            <div class="items-center space-x-8 flex">
+                <a href="tel:84969467477" class="flex items-center space-x-2">
+                    <img src="../dist/svg/Phone.svg" alt="phone svg">
+                    <div>+84 969 - 467 - 477</div>
                 </a>
-                <a href="">
-                    <img class="" src="../dist/svg/Cart.svg" alt="cart">
+                <a href="mailto:support@hunglan.com" class="flex items-center space-x-2">
+                    <img src="../dist/svg/Email.svg" alt="phone svg">
+                    <div>support@hunglan.com</div>
                 </a>
-            </div>
-        </div>
-        
-        <div mobile class="fixed z-50 top-0 left-0 lg:hidden bg-linear flex items-center justify-between w-full h-16 px-6 bg-white">
-            <button onclick="open_menu()" class="w-16">
-                <img class="w-6 h-6 object-cover" src="../dist/svg/Menu.svg" alt="Menu">
-            </button>
-            <a href="#" class="block h-full">
-                <img class="h-full py-1" alt="logo" src="../dist/images/logo.png">
-            </a>
-            <div class="flex items-center space-x-4">
-                <a href="" class="relative">
-                    <div class="absolute -top-2 -right-2 bg-[#B7202E] text-xs rounded-full text-white w-4 h-4 flex items-center justify-center">2</div>
-                    <img class="w-6 h-6 object-cover" src="../dist/svg/Cart.svg" alt="Cart">
-                </a>
-                <a href="">
-                    <img class="w-6 h-6 object-cover" src="../dist/svg/User.svg" alt="User">
-                </a>
-            </div>
-        </div>
-
-        <div class="fixed w-full z-50 top-0 right-full bg-linear transition h-full lg:hidden block bg-white" id="container-mobile">
-            <div class="flex items-center justify-between h-16 px-6">
-                <a href="#" class="block h-full py-1">
-                    <img class="lazyload h-full" alt="logo" data-src="../dist/images/logo.png">
-                </a>
-                <button onclick="close_menu()">
-                    <svg class="stroke-current text-indigo-600" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
-                </button>
-            </div>
-            <div class="px-4">
-                <ul>
-                    <li>
-                        <a href="#" class="py-2 block w-full">Home</a>
-                    </li>
-                    <li>
-                        <a href="#" class="py-2 block w-full">Home</a>
-                    </li>
-                </ul>
             </div>
         </div>
     </header>
@@ -755,6 +748,7 @@
                 </div>
             </div>
         </section>
+
         <div class="flex space-x-9 justify-between py-10">
             <img class="h-11" src="../dist/images/image 7845.png" alt="">
             <img class="h-11" src="../dist/images/image 7842.png" alt="">
