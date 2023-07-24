@@ -72,7 +72,7 @@
             </div>
         </div>
 
-        <div class="max-w-8xl mx-auto px-4 flex items-center justify-between py-2">
+        <div class="max-w-8xl mx-auto px-4 lg:flex hidden items-center justify-between py-2">
             <ul class="flex items-center">
                 <li>
                     <a href="#" class="block px-4 py-2 uppercase hover:text-red-600">Về chúng tôi</a>
@@ -108,9 +108,18 @@
                 </a>
             </div>
         </div>
+
+        <div class="lg:hidden block mt-20 mx-6 mb-4">
+            <form action="" method="GET" class="w-full relative">
+                <input type="text" name="keywords" placeholder="Tìm kiếm" class="w-full text-gray-700 bg-[#F5F6F9] rounded-full px-6 py-3 outline-none">
+                <img class="w-6 h-6 absolute top-1/2 transform -translate-y-1/2 z-10 right-4" src="../dist/svg/Search.svg" alt="Search">
+            </form>
+        </div>
     </header>
 
     <main>
+
+
         <!-- Banner -->
         <section class="relative overflow-hidden">
             <div class="banner">
@@ -157,10 +166,10 @@
                     </div>
                 </div>
             </div>
-            <div class="prev-banner lg:block hidden selection:bg-transparent absolute top-1/2 transform -translate-y-1/2 left-10 z-20 border-2 border-solid border-gray-600 rounded-full py-3 px-10 cursor-pointer">
+            <div class="prev-banner lg:!block !hidden selection:bg-transparent absolute top-1/2 transform -translate-y-1/2 left-10 z-20 border-2 border-solid border-gray-400 rounded-full py-3 px-10 cursor-pointer">
                 <img class="transform rotate-180" src="../dist/svg/Arrow - Right - White.svg" alt="prev">
             </div>
-            <div class="next-banner lg:block hidden selection:bg-transparent absolute top-1/2 transform -translate-y-1/2 right-10 z-20 border-2 border-solid border-gray-600 rounded-full py-3 px-10 cursor-pointer">
+            <div class="next-banner lg:!block !hidden selection:bg-transparent absolute top-1/2 transform -translate-y-1/2 right-10 z-20 border-2 border-solid border-gray-400 rounded-full py-3 px-10 cursor-pointer">
                 <img src="../dist/svg/Arrow - Right - White.svg" alt="prev">
             </div>
         </section>
@@ -749,7 +758,7 @@
             </div>
         </section>
 
-        <div class="flex space-x-9 justify-between py-10">
+        <div class="slick-brand flex space-x-9 justify-between py-10">
             <img class="h-11" src="../dist/images/image 7845.png" alt="">
             <img class="h-11" src="../dist/images/image 7842.png" alt="">
             <img class="h-11" src="../dist/images/image 7846.png" alt="">
@@ -943,6 +952,33 @@
             arrows: false,
             dots: false,
             infinite: true,
+            responsive: [
+                {
+                    breakpoint: 600,
+                    settings: {
+                        centerMode: true,
+                        centerPadding: '80px',
+                        slidesToShow: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        centerMode: true,
+                        centerPadding: '80px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+        $('.slick-brand').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            infinite: true,
+            centerMode: true,
+            variableWidth: true,
             responsive: [
                 {
                     breakpoint: 768,
