@@ -70,6 +70,16 @@
     color: #ad1827;
     border-bottom: 2px solid #ad1827;
 }
+.menu-pc > li:hover > .sub-menu {
+    display: block;
+    top: 36px;
+    left: 0px;
+}
+.sub-menu > li:hover .sub-menu{
+    display: block;
+    left: 240px;
+    top: 0px;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
