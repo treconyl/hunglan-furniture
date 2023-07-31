@@ -9,3 +9,4 @@ function close_menu(){
     container_mb.classList.add('right-full')
     container_mb.classList.remove('right-0')
 }
+$.sidebarMenu($(".sidebar-menu"));
